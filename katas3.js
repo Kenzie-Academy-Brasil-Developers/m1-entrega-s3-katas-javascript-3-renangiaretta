@@ -183,8 +183,15 @@ console.log(kata16())
 // Kata 17 - Retornar o menor elemento de sampleArray.
 
 function kata17() {
-naoconsegui
+    let minValue = sampleArray[0]
+    for(let i=1; i<sampleArray.length; i++){
+        if(sampleArray[i] < minValue){
+            minValue = sampleArray[i]
+        }
+    }
+    return minValue
 }
+console.log(kata17())
 
 // Kata 18 - Retornar o maior elemento de sampleArray.
 
