@@ -53,7 +53,7 @@ console.log(kata5())
 
 function kata6() {
     let count = [];
-    for(let i=0; i<=100; i++){
+    for(let i=1; i<=100; i++){
         if(i%3 ==0){
             count.push(i)
         }
@@ -80,7 +80,7 @@ console.log(kata7())
 function kata8() {
     let count = [];
     for(let i=100; i>=1; i--){
-        if(i%3 == 0 && i%7 == 0){
+        if(i%3 == 0 || i%7 == 0){
             count.push(i)
         }
     }
@@ -125,7 +125,7 @@ console.log(kata11())
 
 function kata12() {
     let impares = [];
-    for(let i=1; i<=sampleArray.length; i++){
+    for(let i=1; i<sampleArray.length; i++){
         if(sampleArray[i]%2 != 0){
             impares.push(sampleArray[i]);
         }
@@ -196,11 +196,11 @@ console.log(kata17())
 // Kata 18 - Retornar o maior elemento de sampleArray.
 
 function kata18() {
-    let maxValue = -Infinity
+    let maxValue = sampleArray[0]
     for(let i=0; i<sampleArray.length; i++){
         let numAtual = sampleArray[i]
-        if(numAtual > maxValue){
-            maxValue = numAtual
+        if(sampleArray[i] > maxValue){
+            maxValue = sampleArray[i]
         }
     }
     return maxValue
